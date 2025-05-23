@@ -55,7 +55,7 @@ int main(void)
 
     leds_state = !leds_state;
     LOG_DBG("LEDs state: %s", leds_state ? "ON" : "OFF");
-    k_msleep(500);
+    k_msleep(CONFIG_LED_BLINK_PERIOD);
   }
   return 0;
 }
