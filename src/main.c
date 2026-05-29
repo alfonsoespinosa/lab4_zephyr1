@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
@@ -18,9 +17,11 @@ extern void blue_led_off();
 
 int main(void)
 {
-  while (1) {
-    k_msleep(CONFIG_LED_BLINK_PERIOD);
-  }
+  //
+  LOG_DBG("Doing something");
+  //
+
+  k_sleep(K_FOREVER);
 
   return 0;
 }
